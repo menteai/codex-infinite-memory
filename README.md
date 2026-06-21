@@ -250,6 +250,14 @@ When prior conversation context may matter, use infinite_memory_search.
 
 Search results are formatted without metadata, so the model gets the memory without noisy IDs, timestamps, or scores.
 
+Forked sessions inherit memory from their parent chain automatically:
+
+```text
+A -> B -> C
+```
+
+When Codex searches from `C`, Infinite Memory searches `C`, `B`, and `A` together.
+
 ---
 
 ## 📦 Package
